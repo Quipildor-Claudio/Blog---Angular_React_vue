@@ -219,3 +219,57 @@ input[type="text"]:hover{
     margin: 0px;
     padding: 0px;
 }
+
+
+.article-item{
+    width: 100%;
+    border-bottom:  1px solid #eee;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+
+.article-item .imagen-wrap {
+    width: 150px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+}
+
+.article-item .imagen-wrap img{
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.article-item h2{
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: opx;
+    margin-bottom: 7px;
+}
+
+.article-item .date{
+    display: block;
+    width: 100%;
+    color: #a4a4a4;
+}
+.article-item a{
+    display: block;
+    color: #444;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.article-item a:hover{
+    text-decoration: underline;
+}
+.subheader{
+    font-size: 38px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
