@@ -3,23 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <script type="text/javascript">
-        window.addEventListener("load", () => {
-            var template = document.getElementById("article-template");
-            var articles = document.getElementById("articles");
-            for (var i = 0; i <= 5; i++) {
-                var clonar = template.cloneNode(true);
-                clonar.removeAttribute('id');
-                articles.appendChild(clonar);
-            }
-        });
-
-
-
-    </script>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Blog</title>
@@ -62,28 +45,36 @@
 
     </header>
 
-    <div id="slider" class="slider-big">
-        <h1>Bienvenidos a Mi Blog</h1>
-        <a href="#" class="btn-white">Ir a Blog</a>
-    </div>
     <div class="center">
         <section id="content">
-            <h2 class="subheader"> Ultimos Articulos</h2>
+            <h1 class="subheader">Formulario</h1>
+            <form class="mid-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre"/>
+                </div>
 
-            <div id="articles">
-                <article class="article-item" id="article-template">
-                    <div class="imagen-wrap">
-                        <img src="https://i.blogs.es/d84ec7/note13/1366_2000.jpeg"
-                            alt="Xiaomi Redmi Note 13">
-                    </div>
-                    <h2>Xiomi Note 13</h2>
-                    <span class="date">
-                        Hace 5 minutos
-                    </span>
-                    <a href="#"> Leer mas</a>
-                    <div class="clearfix"></div>
-                </article>
-            </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Biografia</label>
+                    <textarea type="text" name="bio"></textarea>
+                </div>
+
+                <div class="form-group radio-butons">
+                    <input type="radio" name="genero" value="Hombre"/> Hombre
+                    <input type="radio" name="genero" value="Mujer"/> Mujer
+                    <input type="radio" name="genero" value="Otro"/> Otro
+
+
+                </div>
+                <div class="clearfix"></div>
+                <input type="submit" value="Enviar" class="btn btn-success">
+            </form>
+     
         </section>
 
         <aside id="sidebar">
