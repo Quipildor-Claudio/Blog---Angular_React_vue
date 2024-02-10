@@ -1,0 +1,11 @@
+{
+  "name": "backend-blog",
+  "version": "1.0.0",
+  "description": "api backend para el proyecto Blog Angulr React Vue base datos mongo Db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quipildor Claudio",
+  "license": "ISC"
+}
