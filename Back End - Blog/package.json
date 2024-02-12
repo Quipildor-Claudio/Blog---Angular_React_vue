@@ -4,6 +4,7 @@
   "description": "api backend para el proyecto Blog Angulr React Vue base datos mongo Db",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Quipildor Claudio",
@@ -14,5 +15,8 @@
     "express": "^4.18.2",
     "mongoose": "^8.1.1",
     "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }
