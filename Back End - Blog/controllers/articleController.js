@@ -162,22 +162,51 @@ var controller = {
 
 
     },
-    getImage:(req,res)=>{
+    getImage: (req, res) => {
         let file = req.params.image;
-        let path_file = './upload/articles/'+file;
-        fs.exists(path_file,(exists)=>{
-            if(exists){
+        let path_file = './upload/articles/' + file;
+        fs.exists(path_file, (exists) => {
+            if (exists) {
                 return res.sendFile(path.resolve(path_file));
-            }else{
+            } else {
                 return res.status(404).send({
                     status: 'error',
-                    message:'La imagen no existe !!'
+                    message: 'La imagen no existe !!'
                 });
             }
         });
-        
-    }
 
+    },
+
+    search: (req, res) => {
+        let searchString = req.params.search;
+        Article.find({
+            "$or": [
+                { "title": { "$regex": searchString, "$options": "i" } },
+                { "content": { "$regex": searchString, "$options": "i" } }
+            ]
+        })
+            .sort([['date', 'descending']])
+            .then(articles => {
+                if (!articles || articles.length <= 0) {
+                    return res.status(404).send({
+                        status: 'error',
+                        message: 'No hay artículos que coincidan con tu búsqueda !!!'
+                    });
+                }
+
+                return res.status(200).send({
+                    status: 'success',
+                    articles
+                });
+            })
+            .catch(err => {
+                return res.status(500).send({
+                    status: 'error',
+                    message: 'Error en la petición !!!'
+                });
+            });
+    }
 
 };
 

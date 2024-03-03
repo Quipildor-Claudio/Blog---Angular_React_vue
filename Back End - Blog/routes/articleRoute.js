@@ -15,6 +15,7 @@ router.put('/update/:id',ArticleController.update);
 router.delete('/delete/:id',ArticleController.delete);
 router.post('/upload-image/:id',md_upload,ArticleController.upload);
 router.get('/get-image/:image',ArticleController.getImage);
+router.get('/search/:search',ArticleController.search);
 
 
 module.exports = router;
