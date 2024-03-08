@@ -83,8 +83,9 @@ body {
     transition: 300ms all;
 }
 
-#menu a:hover {
-    color: #f4360b;
+#menu a:hover,
+.active {
+    color: #f4360b !important;
 }
 
 .clearfix {
